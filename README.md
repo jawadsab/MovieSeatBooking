@@ -1,1 +1,2 @@
-# Vanilla JS Project - * MovieSeatBooking *
+# MovieSeatBooking
+VanillaJS Project - 2
