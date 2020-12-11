@@ -1,0 +1,149 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #05204A;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    color: white;
+    padding: 10px;
+}
+
+.movie-container {
+    margin-top: 5%;
+}
+.movie-container label {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.movie-container select {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.showcase {
+    margin-top: 15px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    background-color: #0E0E52;
+    padding: 10px;
+}
+
+.showcase li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.seat {
+    width: 17px;
+    height: 15px;
+    background-color: #353535;
+    margin: 3px;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.selected {
+    background-color: #2589BD;
+}
+.occupied {
+    background-color: #F9F9F9;
+}
+
+.screen {
+    width: 100%;
+    height:90px;
+    background-color: #F9F9F9;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.7);
+    transform: rotateX(-45deg);
+
+}
+.container {
+    width: 50%;
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+
+}
+.row .seat {
+    cursor: pointer;
+}
+.row .seat:hover {
+    transform: scale(1.2);
+}
+.row .seat.occupied {
+    transform: none;
+    cursor:not-allowed;
+}
+
+#count, #total {
+    color: #2589BD;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+.chkout-container {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.chkout-container p {
+   text-align: center;
+}
+#chekout {
+    margin-left: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    background-color: #FFE45E;
+}
+.fa-credit-card {
+    font-size: 1.2rem;
+    color: #05A8AA;
+}
+#chekout:hover {
+    filter: brightness(110%);
+}
+
+@media only screen and (max-width: 470px) {
+    .movie-container {
+        padding: 5px;
+    }
+    .movie-container label {
+        font-size: 1rem;
+    }
+    .movie-container select {
+        font-size: 1rem;
+        margin-left: 5px;
+        outline: none;
+    }
+    #chekout {
+        margin-left: 10px;
+        width: 80px;
+    }
+}
